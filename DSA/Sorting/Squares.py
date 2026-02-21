@@ -12,8 +12,42 @@ def SquareOfSortedArr(arr):
     SortBubble(result)
     return result
 
-print(SquareOfSortedArr(arr))
+def sortedSquares(nums):
+    result = list(map(lambda x:x**2, nums))
+    result.sort()
+    return result
+
+print(sortedSquares(arr))
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def ByTwoPointer(arr, low, high):
+    result = list(map(lambda x:x**2, arr))
+    for i in range(len(arr)):
+        if(arr[low] > arr[high]):
+            arr[low], arr[high] = arr[high], arr[low]
+            
