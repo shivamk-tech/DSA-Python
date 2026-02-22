@@ -1,15 +1,11 @@
-arr = [1,1,2,2,2,3,3,4,4,5,5,6,6,7,7,8,8]
+arr =  [1,1,2,3,3,3,4]
 
-def RemoveDuplicates(arr, low):
-    k = 1
-    while(low < len(arr) - 1):
-        if(arr[low+1] == arr[low]):
-            low+=1
-        elif(arr[low+1] != arr[low]):
-            arr[k],arr[low+1] = arr[low+1], arr[k]
-            k+=1
-            low+=2
-    return arr[:k]
+def RemoveDuplicates(arr):
+    pos = 0
+    for i in range(1, len(arr)):
+        if(arr[i] != arr[pos]):
+            arr[pos+1] = arr[i]
+            pos+=1
+    return arr
 
-low = 0
-print(RemoveDuplicates(arr, low))
+print(RemoveDuplicates(arr))
