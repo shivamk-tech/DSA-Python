@@ -8,3 +8,5 @@ def MajorityElement(nums):
         if value > len(nums)/2: return key
 
 print(MajorityElement(arr))
+
+
