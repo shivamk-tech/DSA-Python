@@ -20,6 +20,17 @@ def TwoSum(nums, target):
         else:
             low+=1
 
-target = 9
-print(TwoSum(nums, target))
+def TwoSumByHashing(nums,target):
+    hashMap = {}
+    for i, num in enumerate(nums):
+        needed = target - num
+        if needed in hashMap:
+            return [hashMap[needed], i]
+        hashMap[num] = i
+    return "not found"
+    
+print(TwoSumByHashing(nums,18))
+
+
+
 
