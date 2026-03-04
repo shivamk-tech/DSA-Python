@@ -1,19 +1,21 @@
 arr = [2, 0, 1, 2, 1, 0, 2, 2, 1, 0, 1, 2, 0, 1, 2]
 
-def Sort(arr, low, high):
+def Sort(nums):
+    high = len(nums) - 1
+    low = 0
     mid = 0
     while mid <= high:
-        if arr[mid] == 0:
-            arr[mid], arr[low] = arr[low], arr[mid]
+        if nums[mid] == 0:
+            nums[mid], nums[low] = nums[low], nums[mid]
             mid+=1
             low+=1
-        elif arr[mid] == 1:
+        elif nums[mid] == 1:
             mid+=1
         else:
-            arr[mid], arr[high] = arr[high], arr[mid]
+            nums[mid], nums[high] = nums[high], nums[mid]
             high-=1
-    return arr
+    return nums
 
 low = 0
 high = len(arr) - 1
-print(Sort(arr, low, high))
+print(Sort(arr))

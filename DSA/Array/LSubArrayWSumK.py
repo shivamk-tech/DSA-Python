@@ -1,4 +1,4 @@
-arr =[ 1,2,3,3,4,5,6,6,7,7,8,9]
+arr =[1,2,3,3,4,5,6,6,7,7,8,9]
 
 def LongSubArrayWithSumK(arr, k):
     SumKList = []
@@ -29,7 +29,7 @@ def LongSubArrayWith2pointer(nums, k):
 
 
 
-print(LongSubArrayWith2pointer(arr, 13))
+print(LongSubArrayWithSumK(arr, 13))
 
 
             
