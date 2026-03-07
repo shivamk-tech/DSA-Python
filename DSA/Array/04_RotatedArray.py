@@ -13,4 +13,11 @@ def RotateArrayByLeft(arr,k):
     reverse(arr,0, len(arr)-1)
     return arr
 
-print(RotateArrayByLeft(arr, 4))
+def RotateArrayByRight(arr, k):
+    reverse(arr,0, len(arr)-1)
+    reverse(arr,k, len(arr)-1)
+    reverse(arr,0,k-1)
+    return arr
+
+
+print(RotateArrayByRight(arr, 2))

@@ -4,7 +4,7 @@ result = []
 def permutations(nums, idx, result):
 
     if idx == len(nums):
-        result.append(nums)   # copy list
+        result.append(nums.copy())   # copy list
         return
 
     for i in range(idx, len(nums)):

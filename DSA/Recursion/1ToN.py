@@ -9,11 +9,11 @@ def OneToN(count,n):
 
 # Mentos life (BackTracking)
 
-def OneToNBackTracking(i,n):
+def OneToNBackTracking(i):
     if(i < 1):
         return 
-    OneToNBackTracking(i-1,n)
+    OneToNBackTracking(i-1)
     print(i)
 
-OneToNBackTracking(5,5)
+OneToNBackTracking(5)
     

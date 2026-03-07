@@ -1,13 +1,11 @@
-arr =[1,2,3,3,4,5,6,6,7,7,8,9]
+arr =[1,2,3,4,5,6,7,8,10]
 
-def Practice(nums,k):
-    SumKlist = []
-    for i in range(len(nums)):
-        Sum = 0
-        for j in range(i, len(nums)):
-            Sum += nums[j]
-            if Sum == k and (j-i+1) > len(SumKlist):
-                SumKlist = nums[i:j+1]
-    return len(SumKlist)
-
-print(Practice(arr, 13))
+def Practice(nums):
+   xor1 = 0
+   xor2 = 0
+   for i in range(1, len(nums) + 2):
+      xor1^=i
+   for i in range(len(nums)):
+      xor2^=nums[i]
+   return xor1^xor2
+print(Practice(arr))

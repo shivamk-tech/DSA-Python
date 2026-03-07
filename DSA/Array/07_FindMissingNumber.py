@@ -11,8 +11,8 @@ def findMissingNum(nums):
 def findMissingByHashing(nums):
     count = [0]*(len(nums)+1)
     for i in range(len(nums)):
-        count[nums[i]-1] = 1
-
+        count[nums[i] - 1] = 1
+    print(count)
     for i in range(len(count)):
         if count[i] == 0:
             return i + 1
@@ -24,7 +24,6 @@ def findMissingBySum(nums):
     listSum = 0
     for i in range(len(nums)):
         listSum+=nums[i]
-   
     return oriSum - listSum
 
 # Optimal Solution Using XOR
