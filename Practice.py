@@ -1,11 +1,14 @@
-arr =[1,2,3,4,5,6,7,8,10]
+arr = [1,1,0,1,1,1,1,1,0,1,1,1]
 
 def Practice(nums):
-   xor1 = 0
-   xor2 = 0
-   for i in range(1, len(nums) + 2):
-      xor1^=i
+   maxLen = 0
+   count = 0
    for i in range(len(nums)):
-      xor2^=nums[i]
-   return xor1^xor2
+      if(nums[i] == 1):
+         count+=1
+         maxLen = max(maxLen, count)
+      elif(nums[i] == 0):
+         count = 0
+   return maxLen
+   
 print(Practice(arr))
