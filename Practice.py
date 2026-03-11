@@ -1,14 +1,12 @@
-arr = [1,1,0,1,1,1,1,1,0,1,1,1]
+arr = [2, 7, 11, 15]
 
-def Practice(nums):
-   maxLen = 0
-   count = 0
+def Practice(nums, target):
+   hashDict = {}
    for i in range(len(nums)):
-      if(nums[i] == 1):
-         count+=1
-         maxLen = max(maxLen, count)
-      elif(nums[i] == 0):
-         count = 0
-   return maxLen
-   
-print(Practice(arr))
+      needed = target - nums[i]
+      if needed in hashDict:
+         return [hashDict[needed], i]
+      hashDict[nums[i]] = i
+   return -1
+
+print(Practice(arr,17))
