@@ -21,7 +21,7 @@ def LongSubArrayWith2pointer(nums, k):
             sum-=nums[left]
             left+=1
         if(sum == k ): 
-            maxLen =max (maxLen, right - left + 1) 
+            maxLen = max (maxLen, right - left + 1) 
         right+=1
         if(right < n):
             sum+=nums[right]
