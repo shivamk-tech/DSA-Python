@@ -9,6 +9,10 @@ def maxProdcut(nums):
             Pro = max(Pro, maxPro)
     return Pro
 
+
+
+
+
 def optimalSolution(nums):
     pre = 1
     suff = 1
