@@ -1,6 +1,6 @@
 arr = [-1,0,3,5,9,12]
 
-def lowerBound(nums,target):
+def upperBound(nums,target):
     low = 0
     high = len(nums) - 1
     ans = len(nums)
