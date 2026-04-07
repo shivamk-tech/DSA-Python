@@ -10,6 +10,7 @@ firsn = first[:spcaef]
 lastn = last[:spcael]
 print("console")
 print("console")
+print("console")
 
 sentence = print(f"Hello {firsn} {lastn} Taylor! You just delved into python.")
 
