@@ -8,10 +8,7 @@ spcaef = first.index(" ")
 spcael = last.index(" ")
 firsn = first[:spcaef]
 lastn = last[:spcael]
-print("console")
-print("console")
-print("console")
-
+p
 sentence = print(f"Hello {firsn} {lastn} Taylor! You just delved into python.")
 
 
